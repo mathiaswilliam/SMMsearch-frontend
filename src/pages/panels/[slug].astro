@@ -2,7 +2,6 @@
 import { getAPIPath, JSONConvertToHTML, makeWordsClickable, optimizeImageUrl, shuffleArray } from "../../js/utils";
 import PanelLayout from "../../layouts/PanelLayout.astro";
 import SMM_panelCards_related from "../../components/SMM_panelCards_related.astro"
-import { undefined } from "astro:schema";
 
 //import servicePlatformsData from "../../data/temp-services";
 const allServicesFetch = await fetch(getAPIPath() + "api/services.json");
