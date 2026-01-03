@@ -33,7 +33,7 @@ export function JSONConvertToHTML(JSONStringParameter : string) {
     // Parse the JSON string to get an object (if it is not already parsed)
     const parsedJSON = JSON.parse(JSONString);
     const html = edjsParser.parse(parsedJSON);  // Pass the parsed object    
-    return html.join("");
+    return html;
 }
 
 export function makeWordsClickable(html:string, words:string[]) {

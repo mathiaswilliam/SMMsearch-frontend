@@ -1,10 +1,8 @@
+// @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel/serverless";
-
+import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
-
-import metaTags from 'astro-meta-tags';
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,10 +12,12 @@ export default defineConfig({
   site: 'https://smmsearch.io/',
   output: 'server',
   adapter: vercel(),
-  integrations: [tailwind(), metaTags(), sitemap({
+  vite: {
+    plugins: [tailwindcss(), sitemap({
     filter: (page) =>
       page !== `https://smmsearch.io/admin/` &&
       page !== `https://smmsearch.io/search/` &&
       page !== `https://smmsearch.io/services/search/`
   })],
+  },
 });

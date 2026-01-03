@@ -20,9 +20,7 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-
-.env
-.vercel
-test.js
+# jetbrains setting folder
+.idea/
 plan.md
-.env
+test.js

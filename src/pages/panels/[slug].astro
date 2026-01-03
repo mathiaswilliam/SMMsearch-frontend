@@ -243,7 +243,7 @@ randomPanelsList = shuffleArray(randomPanelsList);
                                     "Sitejabber_logo.png"
                                     :
                                     "reviewsLogo.webp")
-                                } alt={rating.ratingSite + " logo"} class="h-10 lg:w-[180px] w-full object-contain" />
+                                } alt={rating.ratingSite + " logo"} class="h-10 lg:w-45 w-full object-contain" />
                                 <span class="flex gap-2 font-bold text-[#36304a] text-2xl">
                                     {
                                         `${rating.score} / 5 (${rating.TotalReviews} reviews)` 
@@ -260,7 +260,7 @@ randomPanelsList = shuffleArray(randomPanelsList);
                 (servicesResponse.length > 0 ) && (
                     <h2 class="text-3xl font-semibold">20 Latest Services by {panel.panelTitle}</h2>
                     <div class="services-table-holder shadow-2xl mt-5 lg:w-full w-[89vw] overflow-auto">
-                        <div class="table-wrapper md:w-full w-[700px] ">
+                        <div class="table-wrapper md:w-full w-175 ">
                             <span class="offerHeader w-full flex bg-[#36304a] font-semibold text-white ">
                                 <span class="offer_id my-6 w-[5%] pl-2">
                                     S.No

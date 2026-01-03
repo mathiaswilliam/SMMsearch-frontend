@@ -26,14 +26,15 @@ const allServiceRes : serviceSchema[] = await allServicesFetch.json();
 
 for (let i = 0, counter=0; i < allServiceRes.length; i++, counter++) {
     let count = 0;
+    // console.log(allServiceRes[i].serviceTitle.toString().toLowerCase());
     
-    const allPanelServicesFetch: any = await fetch(`https://smmsearch-io-cron.vercel.app/api/panelServices/search_${allServiceRes[i].serviceTitle.toString().toLowerCase()}`).then(
+    /* const allPanelServicesFetch: any = await fetch(`https://smmsearch-io-cron.vercel.app/api/panelServices/searchCount_${allServiceRes[i].serviceTitle.toString().toLowerCase()}`).then(
         (Response) => Response.json(),
     );
-    count = allPanelServicesFetch.servicesFoundCount;
+    count = allPanelServicesFetch.servicesFoundCount; */
     // console.log("Searching for - ", allServiceRes[i].serviceTitle.toString().toLowerCase());
     
-    platformsServiceCount.push([allServiceRes[i].serviceTitle, count]);
+    platformsServiceCount.push([allServiceRes[i].serviceTitle, 0]);
 }
 // console.log(platformsServiceCount);
 
